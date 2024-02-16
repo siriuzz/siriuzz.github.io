@@ -1,1 +1,59 @@
-<h1>Hola mundo!</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+</head>
+
+<body class="w-full">
+    <div>
+        <header class="bg-white">
+            <nav id="navBar" class="flex min-w-full h-auto w-full justify-center text-white sm:items-center flex-row space-x-14  bg-blue-900">
+            </nav>
+        </header>
+        <div id="home" class="flex justify-center items-center min-w-full h-80 bg-[#0f1e39]">
+            <div id="name" >
+                <p class="font-fredoka font-bold bg-clip-text text-transparent bg-gradient-to-r text-5xl 
+                to-[#0050b1] from-[#ccccec]">Mi nombre es Elián Matos Díaz</p>
+            </div>
+        </div>
+        <div id="aboutMe">
+            About Me
+        </div>
+        <div id="projects">
+            Projects
+        </div>
+        <div id="contactMe">
+            Contact Me
+        </div>
+
+    </div>
+
+</body>
+
+
+</html>
+<script>
+    const links = [
+        ['Home', '#home'],
+        ['About me', '#aboutMe'],
+        ['Projects', '#projects'],
+        ['Contact me', '#contactMe']
+    ];
+
+    const navBar = document.getElementById('navBar');
+
+    links.forEach(([title, url]) => {
+        const link = document.createElement('a');
+        link.href = url;
+        link.classList = ['font-fredoka sm:text-4xl'];
+        link.textContent = title;
+        navBar.appendChild(link);
+    });
+</script>
