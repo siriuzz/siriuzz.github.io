@@ -14,23 +14,51 @@
 <body class="w-full">
     <div>
         <header class="bg-white">
-            <nav id="navBar" class="flex min-w-full h-auto w-full justify-center text-white sm:items-center flex-row space-x-14  bg-blue-900">
+            <nav id="navBar"
+                class="flex min-w-full h-auto w-full justify-center text-white sm:items-center flex-row sm:space-x-14 space-x-3 bg-blue-900">
             </nav>
         </header>
-        <div id="home" class="flex justify-center items-center min-w-full h-80 bg-[#0f1e39]">
-            <div id="name" >
-                <p class="font-fredoka font-bold bg-clip-text text-transparent bg-gradient-to-r text-5xl 
-                to-[#0050b1] from-[#ccccec]">Mi nombre es Elián Matos Díaz</p>
+        <div id="home" class="flex justify-center items-center min-w-full h-96 bg-fixed bg-cover"
+            style="background-image:url(./assets/main-bg.jpg);">
+            <div id="name">
+                <p class="font-fredoka font-bold  text-5xl 
+                  text-white">Elián Matos Díaz</p>
             </div>
         </div>
-        <div id="aboutMe">
-            About Me
+        <div id="about" class="h-auto px-56 py-10 bg-slate-500 ">
+            <div class="container">
+
+                <p class="text-4xl text-center font-fredoka text-white m-5">About me</p>
+                <div class="flex flex-row gap-5">
+                    <div class="basis-1/4">
+
+                        <div class="box flex flex-col bg-white rounded-md">
+                            <div class="flex justify-center">
+                                <img src="./assets/man_4140048.png" class="object-cover h-60" />
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="basis-3/4">
+                        <div class="pt-5">
+
+                            <p>Mi nombre es Elián Matos Díaz, me encuentro cursando la carrera de Ingeniería de
+                                Software
+                                en
+                                el INTEC (Instituto Tecnológico de Santo Domingo)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="projects">
+        <div id="skills" class="h-auto bg-[#0f1e39] ">
+            <p class="text-4xl">Skills</p>
+        </div>
+        <div id="projects" class="bg-[#040101] h-auto">
             Projects
         </div>
-        <div id="contactMe">
-            Contact Me
+        <div id="contact" class="bg-[#fbfcfa] h-auto">
+            Contact
         </div>
 
     </div>
@@ -42,9 +70,10 @@
 <script>
     const links = [
         ['Home', '#home'],
-        ['About me', '#aboutMe'],
+        ['About me', '#about'],
+        ['Skills', '#skills'],
         ['Projects', '#projects'],
-        ['Contact me', '#contactMe']
+        ['Contact', '#contact']
     ];
 
     const navBar = document.getElementById('navBar');
@@ -52,7 +81,7 @@
     links.forEach(([title, url]) => {
         const link = document.createElement('a');
         link.href = url;
-        link.classList = ['font-fredoka sm:text-4xl'];
+        link.classList = ['font-fredoka sm:text-2xl py-3'];
         link.textContent = title;
         navBar.appendChild(link);
     });
