@@ -17,32 +17,29 @@
 </head>
 
 <body>
-    <div>
-        <header class="bg-white">
+    <div class="w-screen sm:w-full">
+        <header class="bg-white w-full">
             <nav id="navBar"
                 class="flex h-auto justify-center text-white sm:items-center flex-row sm:space-x-14 space-x-3 bg-blue-900">
             </nav>
         </header>
-        <div id="home" class="flex justify-center items-center  h-96  bg-cover"
-            style="background-image:url(./assets/home-bg.jpg);">
+        <div id="home" class="bg-slate-800 flex w-screen justify-center items-center h-auto">
+        <!-- <div id="home" class="flex justify-center items-center  h-auto  bg-cover"
+            style="background-image:url(./assets/home-bg.jpg);"> -->
             <div id="name">
                 <p class="font-fredoka font-bold  text-5xl 
-                  text-white">Elián Matos Díaz</p>
+                  text-white py-80 sm:p-80 bg-clip-text text-transparent bg-gradient-to-r from-sky-300 via-emerald-500 to-purple-700">Elián Matos Díaz</p>
             </div>
         </div>
-        <div id="about" class="h-auto px-56 py-10 bg-slate-500 ">
+        <div id="about" class="h-auto bg-slate-500 ">
 
-            <p class="text-4xl text-center font-fredoka text-white m-5">About me</p>
-            <div class="flex sm:flex-row flex-column gap-5">
-                <div class="basis-1/4">
-                    <div class="box flex flex-col">
-                        <div class="flex justify-center">
+            <p class="text-4xl text-center font-fredoka py-10 text-white">About me</p>
+            <div class="flex sm:flex-row flex-col px-10 py-12 sm:gap-5">
+                <div class="basis-1/4 flex justify-center sm:pb-0 pb-10">
                             <img src="./assets/man_4140048.png" class="object-cover h-60" />
-                        </div>
-                    </div>
                 </div>
-                <div class="basis-3/4 ">
-                    <div class="pt-5 ">
+                <div class="basis-3/4">
+                    <div>
                         <p class="text-justify text-sky-100">My name is Elián Matos Díaz, currently pursuing a Software
                             Engineering major at INTEC (Instituto Tecnológico de Santo Domingo). I am a swift
                             learner, deeply dedicated to my passions, and skilled at collaborating within a team.
@@ -58,7 +55,7 @@
         </div>
         <div id="skills" class="h-auto bg-[#0f1e39] ">
             <p class="text-4xl text-center font-fredoka text-white">Skills</p>
-            <div class="flex flex-row max-w-10 max-h-10">
+            <div class="flex sm:flex-row flex-col max-w-full min-h-auto min-h-auto">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" />
 
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/markdown/markdown-original.svg" />
@@ -146,7 +143,7 @@
         <div id="contact" class="bg-[#fbfcfa] h-auto">
             Contact
         </div>
-        <div class="fixed bottom-10 right-10 ">
+        <div class="fixed bottom-16 right-5">
             <button type="button" id="btnGoTop" onclick="scrolltoTop()"
                 class="bg-blue-900 text-white p-3 rounded-full shadow-2xl ">
                 <i class="material-symbols-outlined">
@@ -168,9 +165,6 @@
         ['Contact', '#contact']
     ];
 
-    const images = [
-
-    ]
 
     const navBar = document.getElementById('navBar');
 
