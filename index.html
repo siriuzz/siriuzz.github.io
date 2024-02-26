@@ -32,7 +32,10 @@
         class="flex justify-center text-white sm:items-center flex-row sm:space-x-14 space-x-3 h-14 bg-blue-900"
       ></nav>
     </header>
-    <div id="home" class="bg-slate-800 flex justify-center items-center h-auto">
+    <div
+      id="home"
+      class="bg-slate-800 flex justify-center items-center h-screen"
+    >
       <!-- <div id="home" class="flex justify-center items-center  h-auto  bg-cover"
             style="background-image:url(./assets/home-bg.jpg);"> -->
       <div>
@@ -70,38 +73,45 @@
         </div>
       </div>
     </div>
-    <div id="skills" class="h-auto bg-gray-400">
+    <div id="skills" class="h-auto bg-gray-400 py-10">
       <p class="text-4xl text-center font-fredoka text-white">Skills</p>
-      <div class="grid grid-cols-2">
-        <div id="logos" class="flex flex-col justify-center content-center pl-20">
+      <div class="flex justify-center">
+        <div id="logos" class="flex flex-col content-center">
           <div id="languages" class="my-3">
             <div>
-              <p class="font-fredoka text-2xl py-2 text-gray-100">Languages</p>
+              <p class="font-fredoka text-2xl py-2 text-center text-gray-100">
+                Languages
+              </p>
             </div>
           </div>
           <div id="frameworks-libraries" class="my-3">
             <div>
-              <p class="font-fredoka text-2xl py-2 text-gray-100">Frameworks and Libraries</p>
+              <p class="font-fredoka text-2xl py-2 text-center text-gray-100">
+                Frameworks and Libraries
+              </p>
             </div>
           </div>
           <div id="dev-tools" class="my-3">
             <div>
-              <p class="font-fredoka text-2xl py-2 text-gray-100">Development Tools</p>
+              <p class="font-fredoka text-2xl py-2 text-center text-gray-100">
+                Development Tools
+              </p>
             </div>
           </div>
           <div id="databases" class="my-3">
             <div>
-              <p class="font-fredoka text-2xl py-2 text-gray-100">Database Engines</p>
+              <p class="font-fredoka text-2xl py-2 text-center text-gray-100">
+                Database Engines
+              </p>
             </div>
           </div>
           <div id="others" class="my-3">
             <div>
-              <p class="font-fredoka text-2xl py-2 text-gray-100">Other technologies</p>
+              <p class="font-fredoka text-2xl py-2 text-center text-gray-100">
+                Other technologies
+              </p>
             </div>
           </div>
-        </div>
-        <div>
-          <p>texto</p>
         </div>
       </div>
       <!-- <div class="flex justify-center mt-4 gap-10">
@@ -109,11 +119,60 @@
         <button onclick="showNextImages()">Next</button>
       </div> -->
     </div>
-    <div id="projects" class="bg-[#040101] h-screen">
+    <div id="projects" class="bg-[#040101] h-auto">
       <div class="text-center">
         <p class="text-white text-3xl">Projects</p>
       </div>
-      <div class="grid "></div>
+      <div class="grid grid-cols-3 grid-rows-1 gap-5 px-5 py-5 bg-blue">
+        <div
+          onclick="window.location.replace('https:\/\/github.com/siriuzz/BankFinder')"
+          class="container cursor-pointer flex flex-col justify-center rounded-xl transition hover:scale-140 ease-out bg-gray-400 border-white"
+        >
+          <div class="flex justify-center size-full border-rose-700">
+            <img
+              src="./assets/projects/bankfinder.png"
+              class="w-full rounded-t-xl"
+            />
+          </div>
+          <div class="text-white text-center text-lg font-fredoka">
+            <div>
+              <p>BankFinder</p>
+            </div>
+          </div>
+        </div>
+        <div
+          onclick="window.location.replace('https:\/\/github.com/siriuzz/IndiC')"
+          class="container cursor-pointer flex flex-col justify-center rounded-xl transition hover:scale-140 ease-out bg-gray-400 border-white"
+        >
+          <div class="flex justify-center size-full border-rose-700">
+            <img
+              src="./assets/projects/indic.png"
+              class="w-full rounded-t-xl"
+            />
+          </div>
+          <div class="text-white text-center text-lg font-fredoka">
+            <div>
+              <p>IndiC</p>
+            </div>
+          </div>
+        </div>
+        <div
+          onclick="window.location.replace('https:\/\/github.com/siriuzz/BetterStudent')"
+          class="container cursor-pointer flex flex-col justify-center rounded-xl transition hover:scale-140 ease-out bg-gray-400 border-white"
+        >
+          <div class="flex justify-center size-full border-rose-700">
+            <img
+              src="./assets/projects/betterstudent.png"
+              class="w-full rounded-t-xl"
+            />
+          </div>
+          <div class="text-white text-center text-lg font-fredoka">
+            <div>
+              <p>BetterStudent</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div id="contact" class="bg-[#fbfcfa] h-auto">Contact</div>
     <div class="fixed bottom-16 right-5">
@@ -121,7 +180,7 @@
         type="button"
         id="go-top"
         onclick="scrolltoTop()"
-        class="bg-blue-900 text-white  rounded-full shadow-2xl p-3"
+        class="bg-blue-900 text-white rounded-full shadow-2xl p-3"
       >
         <i class="material-symbols-outlined"> arrow_upward </i>
       </button>
@@ -196,7 +255,7 @@
 
   const othersLogos = [
     "markdown/markdown-original.svg",
-    // "bash/bash-original.svg",
+    "bash/bash-original.svg",
     "git/git-original.svg",
     "openapi/openapi-original.svg",
   ];
@@ -212,16 +271,15 @@
       let logo = document.createElement("img");
       logo.src =
         "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/" + value;
-      
-      logo.classList=['w-20']
+
+      logo.classList = ["w-20"];
       div.classList = [style];
       div.appendChild(logo);
       parentEl.appendChild(div);
     });
   }
 
-  const logoDivStyle =
-    "grid grid-flow-row grid-cols-12 row-auto gap-3";
+  const logoDivStyle = "grid grid-flow-row grid-cols-7 row-auto gap-3";
 
   displayLogos(languagesLogos, logoDivStyle, "languages");
   displayLogos(
