@@ -14,6 +14,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
 
     <link
       rel="stylesheet"
@@ -26,10 +30,18 @@
   </head>
 
   <body class="group">
-    <header class="bg-white w-full">
+    <header class="bg-blue-900 flex flex-col align-center w-full">
+      <div class="mx-auto">
+        <button
+          class="size-10 rounded-md bg-slate-500 sm:hidden"
+          id="menu-button"
+        >
+          <span class="material-symbols-outlined"> menu </span>
+        </button>
+      </div>
       <nav
         id="navBar"
-        class="flex justify-center text-white sm:items-center flex-row sm:space-x-14 space-x-3 h-14 bg-blue-900"
+        class="sm:flex hidden justify-center text-white items-center flex-col sm:flex-row h-auto sm:space-x-14 sm:h-14 bg-blue-900"
       ></nav>
     </header>
     <div
@@ -123,16 +135,15 @@
       <div class="text-center">
         <p class="text-white text-3xl">Projects</p>
       </div>
-      <div class="grid grid-cols-3 grid-rows-1 gap-5 px-5 py-5 bg-blue">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-3 grid-flow-row sm:grid-rows-1 gap-5 px-5 py-5 bg-blue"
+      >
         <div
           onclick="window.location.replace('https:\/\/github.com/siriuzz/BankFinder')"
-          class="container cursor-pointer flex flex-col justify-center rounded-xl transition hover:scale-140 ease-out bg-gray-400 border-white"
+          class="container cursor-pointer flex flex-col justify-center rounded-xl transition hover:scale-140 ease-out bg-blue-400 border-white"
         >
           <div class="flex justify-center size-full border-rose-700">
-            <img
-              src="./assets/projects/bankfinder.png"
-              class="w-full rounded-t-xl"
-            />
+            <img src="./assets/projects/bankfinder.png" class="rounded-t-xl" />
           </div>
           <div class="text-white text-center text-lg font-fredoka">
             <div>
@@ -142,13 +153,10 @@
         </div>
         <div
           onclick="window.location.replace('https:\/\/github.com/siriuzz/IndiC')"
-          class="container cursor-pointer flex flex-col justify-center rounded-xl transition hover:scale-140 ease-out bg-gray-400 border-white"
+          class="container cursor-pointer flex flex-col justify-center rounded-xl transition hover:scale-140 ease-out bg-blue-400 border-white"
         >
           <div class="flex justify-center size-full border-rose-700">
-            <img
-              src="./assets/projects/indic.png"
-              class="w-full rounded-t-xl"
-            />
+            <img src="./assets/projects/indic.png" class="rounded-t-xl" />
           </div>
           <div class="text-white text-center text-lg font-fredoka">
             <div>
@@ -158,12 +166,12 @@
         </div>
         <div
           onclick="window.location.replace('https:\/\/github.com/siriuzz/BetterStudent')"
-          class="container cursor-pointer flex flex-col justify-center rounded-xl transition hover:scale-140 ease-out bg-gray-400 border-white"
+          class="container cursor-pointer flex flex-col justify-center rounded-xl transition hover:scale-140 ease-out bg-blue-400 border-white"
         >
           <div class="flex justify-center size-full border-rose-700">
             <img
               src="./assets/projects/betterstudent.png"
-              class="w-full rounded-t-xl"
+              class="rounded-t-xl"
             />
           </div>
           <div class="text-white text-center text-lg font-fredoka">
@@ -174,7 +182,30 @@
         </div>
       </div>
     </div>
-    <div id="contact" class="bg-[#fbfcfa] h-auto">Contact</div>
+    <div id="contact" class="bg-blue-900 h-auto">
+      <div>
+        <div>
+          <p class="font-fredoka text-3xl text-center text-white">Contact</p>
+        </div>
+        <div>
+          <form class="px-5 my-5 sm:px-72" action="https://formspree.io/f/mkndzrgj" method="post">
+            <div class="grid grid-flow-row grid-cols-2 gap-5 mb-2">
+              <input label="Name" name="name" placeholder="Name" type="text" maxlength="60" class="rounded-sm" required />
+              <input label="Email" name="email" placeholder="Email" type='email' class="rounded-sm" required />
+            </div>
+              <textarea multi-line label="Message" name="message" spellcheck="true" textarea placeholder="Message" class="w-full rounded-sm  h-20"></textarea>
+           
+            <button type="submit" class="bg-white rounded-sm px-2">Send</button>
+          </form>
+        </div>
+        <div class="flex justify-center">
+          <i class="devicon-github-original colored text-4xl"></i>
+          <!-- <i origin="https://www.cdnlogo.com/logos/g/24/gmail-icon.svg"></i> -->
+          <!-- <img src="https://www.cdnlogo.com/logos/g/24/gmail-icon.svg"> -->
+          <i class="devicon-linkedin-plain colored text-4xl"></i>
+        </div>
+      </div>
+    </div>
     <div class="fixed bottom-16 right-5">
       <button
         type="button"
@@ -197,7 +228,28 @@
     ["Contact", "#contact"],
   ];
 
-  const navBar = document.getElementById("navBar");
+  const toggleButton = document.getElementById("menu-button");
+
+  toggleButton.addEventListener("click", () => {
+    // Toggle the visibility of the menu
+    let navBar = document.getElementById("navBar");
+    // console.log(classes);
+    console.log(navBar.classList);
+
+    if (navBar.classList.contains("hidden")) {
+      navBar.classList.replace("hidden", "flex");
+      // classes.pop("hidden");
+      // classes.push('flex');
+    } else if (navBar.classList.contains("flex")) {
+      navBar.classList.replace("flex", "hidden");
+      // let index = classes.pop("flex");
+      // classes.push('hidden');
+    }
+    // let domList = new DOMTokenList();
+    // classes.forEach((value)=>{
+    //   domList.add(value);
+    // })
+  });
 
   links.forEach(([title, url]) => {
     const link = document.createElement("a");
