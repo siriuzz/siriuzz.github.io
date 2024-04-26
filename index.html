@@ -7,10 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
-      rel="stylesheet"
-    />
-    <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
@@ -24,358 +20,81 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
     />
-    <script src="./main.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <title>Portfolio</title>
   </head>
 
-  <body class="group">
-    <header class="bg-blue-900 flex flex-col align-center w-full">
-      <div class="mx-auto">
-        <button
-          class="size-10 rounded-md bg-slate-500 sm:hidden"
-          id="menu-button"
-        >
-          <span class="material-symbols-outlined"> menu </span>
-        </button>
-      </div>
-      <nav
-        id="navBar"
-        class="sm:flex hidden justify-center text-white items-center flex-col sm:flex-row h-auto sm:space-x-14 sm:h-14 bg-blue-900"
-      ></nav>
-    </header>
+  <body>
     <div
-      id="home"
-      class="bg-slate-800 flex justify-center items-center h-screen"
+      class="grid grid-cols-2 h-screen bg-dark-blue text-white gap-10 overflow-y-auto "
     >
-      <!-- <div id="home" class="flex justify-center items-center  h-auto  bg-cover"
-            style="background-image:url(./assets/home-bg.jpg);"> -->
-      <div>
-        <p
-          id="name"
-          class="font-fredoka font-bold text-5xl py-80 sm:p-80 bg-clip-text text-transparent opacity-0 transition-opacity ease-in bg-gradient-to-r from-sky-300 via-emerald-500 to-purple-700"
-        >
-          Elián Matos Díaz
-        </p>
-      </div>
-    </div>
-    <div id="about" class="h-auto bg-slate-500">
-      <p class="text-4xl text-center font-fredoka pt-10 text-white">About me</p>
-      <div class="flex sm:flex-row flex-col px-10 py-12 sm:gap-5">
-        <div
-          class="basis-1/4 flex justify-center sm:pb-0 pb-10 transition-opacity"
-        >
-          <img src="./assets/man_4140048.png" class="object-cover h-60" />
-        </div>
-        <div class="basis-3/4">
-          <div>
-            <p class="text-justify text-sky-100">
-              My name is Elián Matos Díaz, currently pursuing a Software
-              Engineering major at INTEC (Instituto Tecnológico de Santo
-              Domingo). I am a swift learner, deeply dedicated to my passions,
-              and skilled at collaborating within a team. With a strong
-              commitment to excellence, I continually seek opportunities to
-              broaden my expertise. Actively engaging in projects and
-              initiatives, I apply my knowledge to contribute meaningfully to
-              the field. Particularly interested in problem solving using logic,
-              math and creativity, I aim to utilize my technical acumen and
-              collaborative nature to drive innovation in software engineering.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="skills" class="h-auto bg-gray-400 py-10">
-      <p class="text-4xl text-center font-fredoka text-white">Skills</p>
-      <div class="flex justify-center">
-        <div id="logos" class="flex flex-col content-center">
-          <div id="languages" class="my-3">
-            <div>
-              <p class="font-fredoka text-2xl py-2 text-center text-gray-100">
-                Languages
-              </p>
-            </div>
-          </div>
-          <div id="frameworks-libraries" class="my-3">
-            <div>
-              <p class="font-fredoka text-2xl py-2 text-center text-gray-100">
-                Frameworks and Libraries
-              </p>
-            </div>
-          </div>
-          <div id="dev-tools" class="my-3">
-            <div>
-              <p class="font-fredoka text-2xl py-2 text-center text-gray-100">
-                Development Tools
-              </p>
-            </div>
-          </div>
-          <div id="databases" class="my-3">
-            <div>
-              <p class="font-fredoka text-2xl py-2 text-center text-gray-100">
-                Database Engines
-              </p>
-            </div>
-          </div>
-          <div id="others" class="my-3">
-            <div>
-              <p class="font-fredoka text-2xl py-2 text-center text-gray-100">
-                Other technologies
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="flex justify-center mt-4 gap-10">
-        <button onclick="showPreviousImages()">Previous</button>
-        <button onclick="showNextImages()">Next</button>
-      </div> -->
-    </div>
-    <div id="projects" class="bg-[#040101] h-auto">
-      <div class="text-center">
-        <p class="text-white text-3xl">Projects</p>
-      </div>
-      <div
-        class="grid grid-cols-1 sm:grid-cols-3 grid-flow-row sm:grid-rows-1 gap-5 px-5 py-5 bg-blue"
-      >
-        <div
-          onclick="window.location.replace('https:\/\/github.com/siriuzz/BankFinder')"
-          class="container cursor-pointer flex flex-col justify-center rounded-xl transition hover:scale-140 ease-out bg-blue-400 border-white"
-        >
-          <div class="flex justify-center size-full border-rose-700">
-            <img src="./assets/projects/bankfinder.png" class="rounded-t-xl" />
-          </div>
-          <div class="text-white text-center text-lg font-fredoka">
-            <div>
-              <p>BankFinder</p>
-            </div>
-          </div>
-        </div>
-        <div
-          onclick="window.location.replace('https:\/\/github.com/siriuzz/IndiC')"
-          class="container cursor-pointer flex flex-col justify-center rounded-xl transition hover:scale-140 ease-out bg-blue-400 border-white"
-        >
-          <div class="flex justify-center size-full border-rose-700">
-            <img src="./assets/projects/indic.png" class="rounded-t-xl" />
-          </div>
-          <div class="text-white text-center text-lg font-fredoka">
-            <div>
-              <p>IndiC</p>
-            </div>
-          </div>
-        </div>
-        <div
-          onclick="window.location.replace('https:\/\/github.com/siriuzz/BetterStudent')"
-          class="container cursor-pointer flex flex-col justify-center rounded-xl transition hover:scale-140 ease-out bg-blue-400 border-white"
-        >
-          <div class="flex justify-center size-full border-rose-700">
-            <img
-              src="./assets/projects/betterstudent.png"
-              class="rounded-t-xl"
-            />
-          </div>
-          <div class="text-white text-center text-lg font-fredoka">
-            <div>
-              <p>BetterStudent</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="contact" class="bg-blue-900 h-auto">
-      <div>
-        <div>
-          <p class="font-fredoka text-3xl text-center text-white">Contact</p>
+      <div class="grid justify-items-center content-center ">
+        <div class="w-52 h-52 mb-5">
+          <img
+            src="./assets/profile.jpg"
+            alt="profile picture"
+            class="rounded-full"
+          />
         </div>
         <div>
-          <form class="px-5 my-5 sm:px-72" action="https://formspree.io/f/mkndzrgj" method="post">
-            <div class="grid grid-flow-row grid-cols-2 gap-5 mb-2">
-              <input label="Name" name="name" placeholder="Name" type="text" maxlength="60" class="rounded-sm" required />
-              <input label="Email" name="email" placeholder="Email" type='email' class="rounded-sm" required />
+          <div class="text-4xl font-bold">Elián Matos Díaz</div>
+          <div class="text-2xl text-start">Ingeniero de Software</div>
+          <div id="nav" class="text-lg">
+            <a href="#about" class="hover:text-silver">About me</a><br />
+            <a href="#projects">Projects</a>
+          </div>
+        </div>
+        <div id="contact" class="grid grid-flow-col gap-5 text-xl">
+          <a href="https://github.com/siriuzz">
+            <i class="devicon-github-original"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/elianse">
+            <i class="devicon-linkedin-plain"></i>
+          </a>
+          <a href="https://www.instagram.com/eliaaan.sw/"
+            ><i class="fa fa-instagram" aria-hidden="true"></i
+          ></a>
+        </div>
+      </div>
+      <div class="grid justify-items-center content-center p-10 overflow-y-scroll py-20">
+        <div id="about">
+          <div class="p-3">
+            My name is Elián Matos Díaz, currently pursuing a Software
+            Engineering major at INTEC (Instituto Tecnológico de Santo Domingo).
+            I am a swift learner, deeply dedicated to my passions, and skilled
+            at collaborating within a team. With a strong commitment to
+            excellence, I continually seek opportunities to broaden my
+            expertise. Actively engaging in projects and initiatives, I apply my
+            knowledge to contribute meaningfully to the field. Particularly
+            interested in problem solving using logic, math and creativity, I
+            aim to utilize my technical acumen and collaborative nature to drive
+            innovation in software engineering.
+          </div>
+        </div>
+        <div id="projects" class="pt-3">
+          <div class="grid grid-flow-row">
+            
+            <div class="hover:bg-light-blue rounded-lg grid grid-cols-8 hover:cursor-pointer p-3">
+              <div class="col-span-7">
+                <p class="text-2xl text-left">BankFinder</p>
+                <p class="text-md text-left">
+                  Este proyecto consiste en un buscador de bancos locales. Fue
+                  un reto ya que al momento de iniciar el desarrollo no sabíamos
+                  nada de buscadores.
+                </p>
+              </div>
+              <div class="col-span-1">2023</div>
             </div>
-              <textarea multi-line label="Message" name="message" spellcheck="true" textarea placeholder="Message" class="w-full rounded-sm  h-20"></textarea>
+
+            
            
-            <button type="submit" class="bg-white rounded-sm px-2">Send</button>
-          </form>
-        </div>
-        <div class="flex justify-center">
-          <a href="http://www.github.com/siriuzz" target="_blank"><i class="devicon-github-original colored text-4xl hover:cursor-pointer"></a></i>
-          <!-- <i origin="https://www.cdnlogo.com/logos/g/24/gmail-icon.svg"></i> -->
-          <!-- <img src="https://www.cdnlogo.com/logos/g/24/gmail-icon.svg"> -->
-          <a href="http://www.linkedin.com/in/elián-matos-díaz-960761217" target="_blank"><i class="devicon-linkedin-plain colored text-4xl hover:cursor-pointer"></a></i>
+          </div>
         </div>
       </div>
     </div>
-    <div class="fixed bottom-16 right-5">
-      <button
-        type="button"
-        id="go-top"
-        onclick="scrolltoTop()"
-        class="bg-blue-900 text-white rounded-full shadow-2xl p-3"
-      >
-        <i class="material-symbols-outlined"> arrow_upward </i>
-      </button>
-    </div>
-    <!-- <div class=" "> -->
   </body>
 </html>
-<script>
-  const links = [
-    ["Home", "#home"],
-    ["About me", "#about"],
-    ["Skills", "#skills"],
-    ["Projects", "#projects"],
-    ["Contact", "#contact"],
-  ];
-
-  const toggleButton = document.getElementById("menu-button");
-
-  toggleButton.addEventListener("click", () => {
-    // Toggle the visibility of the menu
-    let navBar = document.getElementById("navBar");
-    // console.log(classes);
-    console.log(navBar.classList);
-
-    if (navBar.classList.contains("hidden")) {
-      navBar.classList.replace("hidden", "flex");
-      // classes.pop("hidden");
-      // classes.push('flex');
-    } else if (navBar.classList.contains("flex")) {
-      navBar.classList.replace("flex", "hidden");
-      // let index = classes.pop("flex");
-      // classes.push('hidden');
-    }
-    // let domList = new DOMTokenList();
-    // classes.forEach((value)=>{
-    //   domList.add(value);
-    // })
-  });
-
-  links.forEach(([title, url]) => {
-    const link = document.createElement("a");
-    link.href = url;
-    link.classList = [
-      "font-fredoka text-3xl py-3 transition-all ease-out hover:text-4xl hover:ease-in-out",
-    ];
-    link.textContent = title;
-    navBar.appendChild(link);
-  });
-
-  //fade in del nombre
-  let nameEl = document.getElementById("name");
-  setTimeout(() => {
-    nameEl.classList.add("duration-1000");
-    nameEl.classList.add("opacity-100");
-  }, 0);
-  const languagesLogos = [
-    "html5/html5-original.svg",
-    "css3/css3-original.svg",
-    "javascript/javascript-original.svg",
-    "csharp/csharp-original.svg",
-    "cplusplus/cplusplus-original.svg",
-    "python/python-original.svg",
-    "dart/dart-original.svg",
-  ];
-
-  const frameworksAndLibrariesLogos = [
-    "flutter/flutter-original.svg",
-    "tailwindcss/tailwindcss-original.svg",
-    "express/express-original.svg",
-    "nextjs/nextjs-original.svg",
-    "vuejs/vuejs-original.svg",
-    "django/django-plain-wordmark.svg",
-    "dotnetcore/dotnetcore-original.svg",
-    "react/react-original.svg",
-  ];
-
-  const devToolsLogos = [
-    "vscode/vscode-original.svg",
-    "visualstudio/visualstudio-original.svg",
-    "postman/postman-original.svg",
-    "azuredevops/azuredevops-original.svg",
-    "github/github-original.svg",
-    "npm/npm-original-wordmark.svg",
-    "docker/docker-original-wordmark.svg",
-  ];
-
-  const databaseLogos = [
-    "mysql/mysql-original.svg",
-    "postgresql/postgresql-original.svg",
-    "firebase/firebase-original.svg",
-    "mongodb/mongodb-original.svg",
-  ];
-
-  const othersLogos = [
-    "markdown/markdown-original.svg",
-    "bash/bash-original.svg",
-    "git/git-original.svg",
-    "openapi/openapi-original.svg",
-  ];
-
-  let counterForDivs = 0,
-    currDiv;
-
-  function displayLogos(logos = [], style = "", parentId = "") {
-    const parentEl = document.getElementById(parentId);
-    let div = document.createElement("div");
-
-    logos.forEach((value, index) => {
-      let logo = document.createElement("img");
-      logo.src =
-        "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/" + value;
-
-      logo.classList = ["w-20"];
-      div.classList = [style];
-      div.appendChild(logo);
-      parentEl.appendChild(div);
-    });
-  }
-
-  const logoDivStyle = "grid grid-flow-row grid-cols-7 row-auto gap-3";
-
-  displayLogos(languagesLogos, logoDivStyle, "languages");
-  displayLogos(
-    frameworksAndLibrariesLogos,
-    logoDivStyle,
-    "frameworks-libraries"
-  );
-  displayLogos(devToolsLogos, logoDivStyle, "dev-tools");
-  displayLogos(databaseLogos, logoDivStyle, "databases");
-
-  displayLogos(othersLogos, logoDivStyle, "others");
-
-  // images.forEach((image, index) => {
-  //   if (counterForDivs % 11 == 0) {
-  //     counterForDivs = 0;
-  //     currDiv = document.createElement("div");
-  //     currDiv.classList = [
-  //       "flex flex-row max-w-20 translate-x-10 duration-700 ",
-  //     ];
-  //     // let imageEl = document.createElement('img');
-  //     // imageEl.src = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/' + image;
-  //     // currDiv.appendChild(imageEl);
-
-  //     // document.getElementById('images').appendChild(currDiv);
-  //   }
-  //   if (currDiv) {
-  //     // currDiv.classList = ['flex flex-row max-w-20 h-96 translate-x-10 duration-700']
-  //     let imageEl = document.createElement("img");
-  //     imageEl.src =
-  //       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/" + image;
-  //     // curr.classList = ['']
-  //     currDiv.appendChild(imageEl);
-
-  //     document.getElementById("images").appendChild(currDiv);
-  //   }
-  //   counterForDivs++;
-
-  // });
-  // window.scroll(()=> {
-  //   if (
-  //     document.height() >=
-  //     window.height() - 100
-  //   ) {
-  //     alert("Near bottom!");
-  //   }
-  // });
-</script>
