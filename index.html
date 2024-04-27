@@ -30,23 +30,45 @@
 
   <body>
     <div
-      class="grid grid-cols-2 h-screen bg-dark-blue text-white gap-10 overflow-y-auto "
+      class="grid grid-cols-1 grid-rows-2 sm:grid-cols-12 sm:grid-rows-1 h-screen bg-dark-blue text-white sm:gap-10 overflow-y-auto"
     >
-      <div class="grid justify-items-center content-center ">
-        <div class="w-52 h-52 mb-5">
+      <div
+        class="grid justify-items-center content-center sm:col-span-5 sm:row-span-1 sm:p-0 md:p-10"
+      >
+        <div class="w-32 h-32 sm:w-52 sm:h-52 mb-10 ">
           <img
             src="./assets/profile.jpg"
             alt="profile picture"
-            class="rounded-full"
+            class="rounded-full drop-shadow-2xl shadow-light-blue"
           />
         </div>
         <div>
-          <div class="text-4xl font-bold">Elián Matos Díaz</div>
-          <div class="text-2xl text-start">Ingeniero de Software</div>
-          <div id="nav" class="text-lg">
-            <a href="#about" class="hover:text-silver">About me</a><br />
-            <a href="#projects">Projects</a>
+          <div class="text-2xl sm:text-4xl font-bold">Elián Matos Díaz</div>
+          <div class="text-lg sm:text-2xl text-start text-silver">
+            Software Engineer
           </div>
+          <nav class="text-lg my-5 flex flex-col justify-normal">
+            <a href="#about">
+              <div>
+                <button
+                  id="aboutBtn"
+                  class="flex-initial hover:text-silver transition hover:translate-x-2 hover:scale-110"
+                >
+                  About me
+                </button>
+              </div>
+            </a>
+            <a href="#projects">
+              <div>
+                <button
+                  id="projectsBtn"
+                  class="flex-initial hover:text-silver transition hover:translate-x-2 hover:scale-110"
+                >
+                  Projects
+                </button>
+              </div>
+            </a>
+          </nav>
         </div>
         <div id="contact" class="grid grid-flow-col gap-5 text-xl">
           <a href="https://github.com/siriuzz">
@@ -60,41 +82,228 @@
           ></a>
         </div>
       </div>
-      <div class="grid justify-items-center content-center p-10 overflow-y-scroll py-20">
-        <div id="about">
-          <div class="p-3">
-            My name is Elián Matos Díaz, currently pursuing a Software
-            Engineering major at INTEC (Instituto Tecnológico de Santo Domingo).
-            I am a swift learner, deeply dedicated to my passions, and skilled
-            at collaborating within a team. With a strong commitment to
-            excellence, I continually seek opportunities to broaden my
-            expertise. Actively engaging in projects and initiatives, I apply my
-            knowledge to contribute meaningfully to the field. Particularly
-            interested in problem solving using logic, math and creativity, I
-            aim to utilize my technical acumen and collaborative nature to drive
-            innovation in software engineering.
-          </div>
-        </div>
-        <div id="projects" class="pt-3">
-          <div class="grid grid-flow-row">
-            
-            <div class="hover:bg-light-blue rounded-lg grid grid-cols-8 hover:cursor-pointer p-3">
-              <div class="col-span-7">
-                <p class="text-2xl text-left">BankFinder</p>
-                <p class="text-md text-left">
-                  Este proyecto consiste en un buscador de bancos locales. Fue
-                  un reto ya que al momento de iniciar el desarrollo no sabíamos
-                  nada de buscadores.
-                </p>
-              </div>
-              <div class="col-span-1">2023</div>
+      <div
+        class="grid justify-items-center content-start overflow-y-scroll py-5 sm:py-20 lg:pr-32 text-silver col-span-7"
+      >
+        <section id="about">
+          <div>
+            <div class="p-3 mb-10">
+              My name is Elián Matos Díaz, currently pursuing a Software
+              Engineering major at INTEC (Instituto Tecnológico de Santo
+              Domingo). I am a swift learner, deeply dedicated to my passions,
+              and skilled at collaborating within a team. With a strong
+              commitment to excellence, I continually seek opportunities to
+              broaden my expertise.
+              <br /><br />
+              Actively engaging in projects and initiatives, I apply my
+              knowledge to contribute meaningfully to the field. Particularly
+              interested in problem solving using logic, math and creativity, I
+              aim to utilize my technical acumen and collaborative nature to
+              drive innovation in software engineering.
             </div>
-
-            
-           
           </div>
-        </div>
+        </section>
+        <section id="projects">
+          <div class="pt-2 sm:ml-6">
+            <div class="grid grid-flow-row gap-5">
+              <a href="https://github.com/siriuzz/IndiC">
+                <div
+                  class="hover:shadow-xl hover:shadow-light-blue/50 transition ease-in-out hover:backdrop-blur-3xl hover:backdrop-brightness-125 rounded-lg grid grid-cols-8 p-2"
+                >
+                  <div
+                    class="col-span-1 text-silver text-2xl sm:text-base text-right sm:order-last"
+                  >
+                    2023
+                  </div>
+                  <div class="sm:col-span-2 col-span-8 p-4">
+                    <img
+                      src="./assets/projects/indic.png"
+                      alt="Foto Proyecto IndiC"
+                      class="rounded-xl border-silver border-2"
+                    />
+                  </div>
+                  <div class="sm:col-span-5 col-span-8">
+                    <p class="text-2xl text-left font-bold">IndiC</p>
+                    <div class="grid grid-row-5">
+                      <p class="text-md text-left row-span-3">
+                        IndiC stands out as one of my most demanding projects to
+                        date. This comprehensive academic system has a wide
+                        range of functionalities, including user login, course
+                        selection, password recovery, a schedule search tool,
+                        and role management. The tight deadline of under three
+                        months required a rapid learning curve and accelerated
+                        development efforts.
+                      </p>
+                      <div class="pt-2 flex flex-wrap gap-2 font-bold text-sm">
+                        <div
+                          class="rounded-full bg-light-blue w-max px-2 border-silver border-2"
+                        >
+                          <i class="devicon-react-original"></i>
+                          React
+                        </div>
+                        <div
+                          class="rounded-full bg-light-blue w-max px-2 border-silver border-2"
+                        >
+                          <i class="devicon-nextjs-plain"></i>
+
+                          Next.js
+                        </div>
+                        <div
+                          class="rounded-full bg-light-blue w-max px-2 border-silver border-2"
+                        >
+                          <i class="devicon-mysql-original"></i>
+                          MySQL
+                        </div>
+                        <div
+                          class="rounded-full bg-light-blue w-max px-2 border-silver border-2"
+                        >
+                          <i class="devicon-express-original"></i>
+                          Express
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="https://github.com/siriuzz/BankFinder">
+                <div
+                  class="hover:shadow-xl hover:shadow-light-blue/50 hover:backdrop-blur-sm hover:backdrop-brightness-125 transition ease-in-out hover:bg-opacity-10 rounded-lg grid grid-cols-8 p-3"
+                >
+                  <div class="col-span-1 text-silver text-2xl sm:text-base text-right sm:order-last">2023</div>
+                  <div class="sm:col-span-2 col-span-8 p-4">
+                    <img
+                      src="./assets/projects/bankfinder.png"
+                      alt="Foto Proyecto IndiC"
+                      class="rounded-xl border-silver border-2"
+                    />
+                  </div>
+                  <div class="sm:col-span-5 col-span-8">
+                    <p class="text-2xl text-left font-bold">BankFinder</p>
+                    <div class="grid grid-row-5">
+                      <p class="text-md text-left row-span-3">
+                        This project consists of a local bank search engine. It
+                        was a challenge since at the time of starting
+                        development we knew nothing about search engines.
+                      </p>
+                      <div class="pt-2 flex flex-wrap gap-2 font-bold text-sm">
+                        <div
+                          class="rounded-full bg-light-blue w-max px-2 border-silver border-2"
+                        >
+                          <i class="devicon-vuejs-plain"></i>
+                          Vuejs
+                        </div>
+                        <div
+                          class="rounded-full bg-light-blue w-max px-2 border-silver border-2"
+                        >
+                          <i class="devicon-django-plain"></i>
+                          Django
+                        </div>
+
+                        <div
+                          class="rounded-full bg-light-blue w-max px-2 border-silver border-2"
+                        >
+                          <i class="devicon-postgresql-plain"></i>
+                          PostgreSQL
+                        </div>
+
+                        <div
+                          class="rounded-full bg-light-blue w-max px-2 border-silver border-2"
+                        >
+                          <i class="devicon-docker-plain"></i>
+                          Docker
+                        </div>
+                        <div
+                          class="rounded-full bg-light-blue px-2 border-silver border-2 w-max"
+                        >
+                          <i class="devicon-githubactions-plain"></i>
+
+                          GitHub Actions
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a href="https://github.com/siriuzz/BetterStudent">
+                <div
+                  class="hover:shadow-xl hover:shadow-light-blue/50 hover:backdrop-blur-sm hover:backdrop-brightness-125 transition ease-in-out hover:bg-opacity-10 rounded-lg grid grid-cols-8 p-3"
+                >
+                <div class="col-span-1 text-silver text-2xl sm:text-base text-right sm:order-last">2023</div>
+
+                  <div class="sm:col-span-2 col-span-8 p-4">
+                    <img
+                      src="./assets/projects/betterstudent.png"
+                      alt="Foto Proyecto IndiC"
+                      class="rounded-xl border-silver border-2"
+                    />
+                  </div>
+                  <div class="sm:col-span-5 col-span-8">
+                    <p class="text-2xl text-left font-bold">BetterStudent</p>
+                    <div class="grid grid-row-5">
+                      <p class="text-md text-left row-span-3">
+                        This project was my first approach to mobile
+                        development. Leveraging React Native, we swiftly grasped
+                        the syntax and crafted visually appealing components for
+                        the interface.
+                      </p>
+                      <div class="pt-2 flex flex-wrap gap-2 font-bold text-sm">
+                        <div
+                          class="rounded-full bg-light-blue w-max px-2 border-silver border-2"
+                        >
+                          <i class="devicon-react-original"></i>
+                          React Native
+                        </div>
+                        <div
+                          class="rounded-full bg-light-blue w-max px-2 border-silver border-2"
+                        >
+                          <i class="devicon-firebase-plain"></i>
+
+                          Firebase
+                        </div>
+
+                        <div
+                          class="rounded-full bg-light-blue w-max px-2 border-silver border-2"
+                        >
+                          <i class="devicon-docker-plain"></i>
+                          Docker
+                        </div>
+
+                        <div
+                          class="rounded-full bg-light-blue w-max px-2 border-silver border-2"
+                        >
+                          <i class="devicon-express-original"></i>
+                          Express
+                        </div>
+                        <div
+                          class="rounded-full bg-light-blue px-2 border-silver border-2"
+                        >
+                          <i class="devicon-jest-plain"></i>
+                          Jest
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </body>
 </html>
+<script>
+  // const aboutBtn = document.querySelector("a#aboutBtn");
+  // const projectsBtn = document.querySelector("a#projectsBtn");
+  // const sections = document.querySelectorAll("section[id]"); // Select all sections with IDs
+
+  // function updateNavigation() {
+  //   sections.forEach((section) => {
+  //     const { top, left, bottom, right } = section.getBoundingClientRect();
+  //     const { innerHeight, innerWidth } = window;
+  //   });
+  // }
+
+  // window.addEventListener("scroll", updateNavigation); // Call updateNavigation on scroll event
+  // updateNavigation();
+</script>
